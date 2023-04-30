@@ -2,23 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
-using Unity.MLAgents.Sensors;
 
-public class PredatorBehaviour : Agent
+public class PredatorAgent : Agent
 {
-    public override void Initialize() {
-        base.Initialize();
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
-    public override void CollectObservations(VectorSensor sensor) {
-        base.CollectObservations(sensor);
-    }
-    public override void OnActionReceived(float[] vectorAction) {
-        base.OnActionReceived(vectorAction);
-    }
-    public override void Heuristic(float[] actionsOut) {
-        base.Heuristic(actionsOut);
-    }
-    public override void OnEpisodeBegin() {
-        base.OnEpisodeBegin();
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
