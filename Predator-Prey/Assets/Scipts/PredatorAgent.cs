@@ -17,10 +17,10 @@ public class PredatorAgent : Agent
         //TODO: Maximum velocity, etc.
         Rigidbody rb = this.GetComponent<Rigidbody>();
 
-        float forceMagnitude = 0.4f * actions.ContinuousActions[0];
-        float rotateY = 2f * actions.ContinuousActions[1];
+        float speedForward = 5f * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        float rotateY = 2f * Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
-        rb.AddForce(transform.forward * forceMagnitude, ForceMode.Impulse);
+        this.transform.position += this.transform.forward * speedForward * Time.deltaTime;
         this.transform.Rotate(0f, rotateY, 0f);
 
     }
