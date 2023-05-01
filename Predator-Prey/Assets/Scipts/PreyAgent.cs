@@ -5,24 +5,22 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-public class PredatorAgent : Agent
+public class PreyAgent : Agent
 {
 
     Animator _animator;
     string _currentState;
-    const string RUN_FORWARD = "RunForward";
-    const string RUN_BACKWARD = "RunBack";
-    const string WALK_FORWARD = "Walk Forward";
-    const string WALK_BACKWARD = "Walk Backward";
+    const string RUN = "Run";
 
     public void Start() {
         _animator = this.gameObject.GetComponent<Animator>();
-        ChangeAnimationState(RUN_FORWARD);
+        ChangeAnimationState(RUN);
     }
 
+
     public override void OnEpisodeBegin() {
-        this.transform.position = new Vector3(-5.5f, 0.5f, 0f);
-        this.transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
+        this.transform.position = new Vector3(3.39f, 0.45f, -4.71f);
+        this.transform.rotation = Quaternion.Euler(new Vector3(0f, -13f, 0f));
     }
 
     public override void OnActionReceived(ActionBuffers actions) {
@@ -31,18 +29,6 @@ public class PredatorAgent : Agent
 
         float speedForward = 5f * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
         float rotateY = 2f * Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
-
-        /*
-        if (0 < speedForward && speedForward < 0.5f && !IsAnimationPlaying(_animator, RUN_FORWARD)) {
-            ChangeAnimationState(RUN_FORWARD);
-        } else if (0.5 < speedForward && !IsAnimationPlaying(_animator, RUN_FORWARD)) {
-            ChangeAnimationState(RUN_FORWARD);
-        } else if (-0.5 < speedForward && speedForward < 0 && !IsAnimationPlaying(_animator, RUN_BACKWARD)) {
-            ChangeAnimationState(RUN_BACKWARD);
-        } else if (speedForward < -0.5 && !IsAnimationPlaying(_animator, RUN_BACKWARD)) {
-            ChangeAnimationState(RUN_BACKWARD);
-        }
-        */
 
         this.transform.position += this.transform.forward * speedForward * Time.deltaTime;
         this.transform.Rotate(0f, rotateY, 0f);
@@ -56,8 +42,8 @@ public class PredatorAgent : Agent
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Prey")) {
-            SetReward(1f);
+        if (other.gameObject.CompareTag("Predator")) {
+            SetReward(-1f);
             // Only for the simple case:
             EndEpisode();
         } else if (other.gameObject.CompareTag("Deadzone")) {
