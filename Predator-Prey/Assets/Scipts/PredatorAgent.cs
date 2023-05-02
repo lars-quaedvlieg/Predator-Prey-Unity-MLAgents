@@ -8,44 +8,29 @@ using Unity.MLAgents.Sensors;
 public class PredatorAgent : Agent
 {
 
-    Animator _animator;
-    string _currentState;
-    const string RUN_FORWARD = "RunForward";
-    const string RUN_BACKWARD = "RunBack";
-    const string WALK_FORWARD = "Walk Forward";
-    const string WALK_BACKWARD = "Walk Backward";
+    private Animator _animator;
+    private string _currentState;
+    private const string RUN_FORWARD = "RunForward";
+    private const string RUN_BACKWARD = "RunBack";
+    private const string WALK_FORWARD = "Walk Forward";
+    private const string WALK_BACKWARD = "Walk Backward";
+
+    private NatureEnvController envController;
 
     public void Start() {
-        _animator = this.gameObject.GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         ChangeAnimationState(RUN_FORWARD);
-    }
-
-    public override void OnEpisodeBegin() {
-        this.transform.position = new Vector3(-5.5f, 0.5f, 0f);
-        this.transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
+        envController = GetComponentInParent<NatureEnvController>();
     }
 
     public override void OnActionReceived(ActionBuffers actions) {
         //TODO: Maximum velocity, etc.
-        Rigidbody rb = this.GetComponent<Rigidbody>();
 
-        float speedForward = 5f * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
-        float rotateY = 2f * Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
+        float speedForward = envController.predatorMoveSpeed * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        float rotateY = envController.predatorRotateSpeed * Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
-        /*
-        if (0 < speedForward && speedForward < 0.5f && !IsAnimationPlaying(_animator, RUN_FORWARD)) {
-            ChangeAnimationState(RUN_FORWARD);
-        } else if (0.5 < speedForward && !IsAnimationPlaying(_animator, RUN_FORWARD)) {
-            ChangeAnimationState(RUN_FORWARD);
-        } else if (-0.5 < speedForward && speedForward < 0 && !IsAnimationPlaying(_animator, RUN_BACKWARD)) {
-            ChangeAnimationState(RUN_BACKWARD);
-        } else if (speedForward < -0.5 && !IsAnimationPlaying(_animator, RUN_BACKWARD)) {
-            ChangeAnimationState(RUN_BACKWARD);
-        }
-        */
-
-        this.transform.position += this.transform.forward * speedForward * Time.deltaTime;
-        this.transform.Rotate(0f, rotateY, 0f);
+        transform.position += transform.forward * speedForward * Time.deltaTime;
+        transform.Rotate(0f, rotateY, 0f);
 
     }
 
@@ -57,13 +42,7 @@ public class PredatorAgent : Agent
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Prey")) {
-            SetReward(1f);
-            // Only for the simple case:
-            EndEpisode();
-        } else if (other.gameObject.CompareTag("Deadzone")) {
-            SetReward(-1f);
-            // Only for the simple case:
-            EndEpisode();
+            envController.PredatorPreyCollision(other);
         }
     }
 
