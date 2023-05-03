@@ -24,14 +24,11 @@ public class PredatorAgent : Agent
     }
 
     public override void OnActionReceived(ActionBuffers actions) {
-        //TODO: Maximum velocity, etc.
-
         float speedForward = envController.predatorMoveSpeed * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
         float rotateY = envController.predatorRotateSpeed * Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
         transform.position += transform.forward * speedForward * Time.deltaTime;
         transform.Rotate(0f, rotateY, 0f);
-
     }
 
     public override void Heuristic(in ActionBuffers actionsOut) {

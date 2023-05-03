@@ -21,15 +21,11 @@ public class PreyAgent : Agent
     }
 
     public override void OnActionReceived(ActionBuffers actions) {
-        //TODO: Maximum velocity, etc.
-        Rigidbody rb = this.GetComponent<Rigidbody>();
-
         float speedForward = envController.preyMoveSpeed * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
         float rotateY = envController.preyRotateSpeed * Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
 
         transform.position += transform.forward * speedForward * Time.deltaTime;
         transform.Rotate(0f, rotateY, 0f);
-
     }
 
     public override void Heuristic(in ActionBuffers actionsOut) {

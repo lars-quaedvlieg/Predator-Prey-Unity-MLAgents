@@ -75,9 +75,6 @@ public class NatureEnvController : MonoBehaviour
     {
         resetTimer += 1;
         if (resetTimer >= maxEnvironmentSteps && maxEnvironmentSteps > 0) {
-            // TODO: Look at a bit into this reward model
-            // preyGroup.AddGroupReward(1f);
-            // predatorGroup.SetGroupReward(-1f);
             predatorGroup.GroupEpisodeInterrupted();
             preyGroup.GroupEpisodeInterrupted();
             ResetScene();
@@ -88,8 +85,11 @@ public class NatureEnvController : MonoBehaviour
         // Note: For now, the agent cannot die if it collides with the wall (I don't see an issue with this)
 
         Agent preyAgent = prey.gameObject.GetComponent<Agent>();
-        preyGroup.AddGroupReward(-1f / numInitPrey);
-        predatorGroup.AddGroupReward(1f / numInitPrey - (float)resetTimer / maxEnvironmentSteps);
+        float predatorReward = 1f / numInitPrey - (float)resetTimer / maxEnvironmentSteps;
+        float preyReward = -1 * predatorReward;
+
+        preyGroup.AddGroupReward(preyReward);
+        predatorGroup.AddGroupReward(predatorReward);
 
         KillAgent(preyAgent);
 
@@ -104,7 +104,7 @@ public class NatureEnvController : MonoBehaviour
     public void KillAgent(Agent agent) {
         removedAgents.Add(agent);
 
-        /* This might now even be necessary
+        /* This might not even be necessary
         if (agent.CompareTag("Predator")) {
             predatorGroup.UnregisterAgent(agent);
         } else if (agent.CompareTag("Prey")) {
