@@ -10,7 +10,7 @@ namespace Unity.MLAgents.Sensors
     /// </summary>
     public abstract class CustomRayPerceptionSensorComponentBase : SensorComponent
     {
-        [HideInInspector, SerializeField, FormerlySerializedAs("sensorName")]
+        [SerializeField, FormerlySerializedAs("sensorName")]
         string m_SensorName = "CustomRayPerceptionSensor";
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Unity.MLAgents.Sensors
             set { m_DetectableTags = value; }
         }
 
-        [HideInInspector, SerializeField, FormerlySerializedAs("raysPerDirection")]
+        [SerializeField, FormerlySerializedAs("raysPerDirection")]
         [Range(0, 50)]
         [Tooltip("Number of rays to the left and right of center.")]
         int m_RaysPerDirection = 3;
@@ -53,7 +53,7 @@ namespace Unity.MLAgents.Sensors
             set { m_RaysPerDirection = value; }
         }
 
-        [HideInInspector, SerializeField, FormerlySerializedAs("maxRayDegrees")]
+        [SerializeField, FormerlySerializedAs("maxRayDegrees")]
         [Range(0, 180)]
         [Tooltip("Cone size for rays. Using 90 degrees will cast rays to the left and right. " +
             "Greater than 90 degrees will go backwards.")]
@@ -69,7 +69,7 @@ namespace Unity.MLAgents.Sensors
             set { m_MaxRayDegrees = value; UpdateSensor(); }
         }
 
-        [HideInInspector, SerializeField, FormerlySerializedAs("sphereCastRadius")]
+        [SerializeField, FormerlySerializedAs("sphereCastRadius")]
         [Range(0f, 10f)]
         [Tooltip("Radius of sphere to cast. Set to zero for raycasts.")]
         float m_SphereCastRadius = 0.5f;
@@ -83,7 +83,7 @@ namespace Unity.MLAgents.Sensors
             set { m_SphereCastRadius = value; UpdateSensor(); }
         }
 
-        [HideInInspector, SerializeField, FormerlySerializedAs("rayLength")]
+        [SerializeField, FormerlySerializedAs("rayLength")]
         [Range(1, 1000)]
         [Tooltip("Length of the rays to cast.")]
         float m_RayLength = 20f;
@@ -99,7 +99,7 @@ namespace Unity.MLAgents.Sensors
 
         // The value of the default layers.
         const int k_PhysicsDefaultLayers = -5;
-        [HideInInspector, SerializeField, FormerlySerializedAs("rayLayerMask")]
+        [SerializeField, FormerlySerializedAs("rayLayerMask")]
         [Tooltip("Controls which layers the rays can hit.")]
         LayerMask m_RayLayerMask = k_PhysicsDefaultLayers;
 
@@ -112,7 +112,7 @@ namespace Unity.MLAgents.Sensors
             set { m_RayLayerMask = value; UpdateSensor(); }
         }
 
-        [HideInInspector, SerializeField, FormerlySerializedAs("observationStacks")]
+        [SerializeField, FormerlySerializedAs("observationStacks")]
         [Range(1, 50)]
         [Tooltip("Number of raycast results that will be stacked before being fed to the neural network.")]
         int m_ObservationStacks = 1;
@@ -130,7 +130,7 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Color to code a ray that hits another object.
         /// </summary>
-        [HideInInspector]
+        //[HideInInspector]
         [SerializeField]
         [Header("Debug Gizmos", order = 999)]
         internal Color rayHitColor = Color.red;
@@ -138,7 +138,7 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Color to code a ray that avoid or misses all other objects.
         /// </summary>
-        [HideInInspector]
+        //[HideInInspector]
         [SerializeField]
         internal Color rayMissColor = Color.white;
 
