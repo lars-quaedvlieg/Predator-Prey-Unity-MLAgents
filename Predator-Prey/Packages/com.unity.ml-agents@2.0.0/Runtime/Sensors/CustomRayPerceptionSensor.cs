@@ -236,7 +236,7 @@ namespace Unity.MLAgents.Sensors
     /// <summary>
     /// A sensor implementation that supports ray cast-based observations.
     /// </summary>
-    public class CustomRayPerceptionSensor : ISensor, IBuiltInSensor
+    public class CustomRayPerceptionSensor : ISensor //, IBuiltInSensor
     {
         float[] m_Observations;
         ObservationSpec m_ObservationSpec;
@@ -374,10 +374,10 @@ namespace Unity.MLAgents.Sensors
         }
 
         /// <inheritdoc/>
-        public BuiltInSensorType GetBuiltInSensorType()
-        {
-            return BuiltInSensorType.CustomRayPerceptionSensor;
-        }
+        //public BuiltInSensorType GetBuiltInSensorType()
+        //{
+        //    return BuiltInSensorType.CustomRayPerceptionSensor;
+        //}
 
         /// <summary>
         /// Evaluates the raycasts to be used as part of an observation of an agent.
