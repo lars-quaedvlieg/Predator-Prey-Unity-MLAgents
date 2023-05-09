@@ -158,6 +158,13 @@ namespace Unity.MLAgents.Sensors
         [SerializeField]
         internal Color rayMissColor = Color.white;
 
+        /// <summary>
+        /// Color to code a ray that has depth information.
+        /// </summary>
+        //[HideInInspector]
+        [SerializeField]
+        internal Color depthRayColor = Color.blue;
+
         [NonSerialized]
         CustomRayPerceptionSensor m_RaySensor;
 
@@ -347,11 +354,13 @@ namespace Unity.MLAgents.Sensors
             var startPositionWorld = rayOutput.StartPositionWorld;
             var endPositionWorld = rayOutput.EndPositionWorld;
             var rayDirection = endPositionWorld - startPositionWorld;
-            rayDirection *= rayOutput.HitFraction;
+            // take abs value of hit fraction since no depth info = -1
+            rayDirection *= Math.Abs(rayOutput.HitFraction);
 
             // hit fraction ^2 will shift "far" hits closer to the hit color
             var lerpT = rayOutput.HitFraction * rayOutput.HitFraction;
             var color = Color.Lerp(rayHitColor, rayMissColor, lerpT);
+            color = rayOutput.HitFraction < 0 ? color : Color.Lerp(color, depthRayColor, 0.5f);
             color.a *= alpha;
             Gizmos.color = color;
             Gizmos.DrawRay(startPositionWorld, rayDirection);
