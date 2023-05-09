@@ -53,6 +53,22 @@ namespace Unity.MLAgents.Sensors
             set { m_RaysPerDirection = value; }
         }
 
+        [SerializeField, FormerlySerializedAs("depthRaysPerDirection")]
+        [Range(0, 50)]
+        [Tooltip("Number of rays to the left and right of center with depth information.")]
+        int m_DepthRaysPerDirection = 3;
+
+        /// <summary>
+        /// Number of depth rays to the left and right of center.
+        /// Note that this should not be changed at runtime.
+        /// </summary>
+        public int DepthRaysPerDirection
+        {
+            get { return m_DepthRaysPerDirection; }
+            // Note: can't change at runtime
+            set { m_DepthRaysPerDirection = value; }
+        }
+
         [SerializeField, FormerlySerializedAs("maxRayDegrees")]
         [Range(0, 180)]
         [Tooltip("Cone size for rays. Using 90 degrees will cast rays to the left and right. " +
@@ -222,17 +238,48 @@ namespace Unity.MLAgents.Sensors
         }
 
         /// <summary>
+        /// Returns a bool array for which rays should have depth recorded.
+        /// Follows the same order as the GetRayAngles function so if that's
+        /// changed this will need to be updated accordingly
+        /// </summary>
+        /// <param name="raysPerDirection">Number of rays to the left and right of center.</param>
+        /// <param name="depthRaysPerDirection">Number of depth rays to the left and right of center.</param>
+        /// <returns></returns>
+        internal static bool[] GetDepthRays(int raysPerDirection, int depthRaysPerDirection)
+        {
+            // Since rayAngles is as follows:
+            // { 90, 90 - delta, 90 + delta, 90 - 2*delta, 90 + 2*delta }
+            // The first depthRaysPerDirectiofloatn + 1 elements will be True and rest false
+            var depthRays = new bool[2 * raysPerDirection + 1];
+            depthRays[0] = true;
+            for (var i = 0; i < depthRaysPerDirection; i++)
+            {
+                depthRays[2 * i + 1] = true;
+                depthRays[2 * i + 2] = true;
+            }
+            // pretty sure default for bool arrays is false but do this as a sanity check anyway
+            for (var i = depthRaysPerDirection; i < raysPerDirection; i++)
+            {
+                depthRays[2 * i + 1] = false;
+                depthRays[2 * i + 2] = false;
+            }
+            return depthRays;
+        }
+
+        /// <summary>
         /// Get the CustomRayPerceptionInput that is used by the <see cref="CustomRayPerceptionSensor"/>.
         /// </summary>
         /// <returns></returns>
         public CustomRayPerceptionInput GetCustomRayPerceptionInput()
         {
             var rayAngles = GetRayAngles(RaysPerDirection, MaxRayDegrees);
+            var depthRays = GetDepthRays(RaysPerDirection, DepthRaysPerDirection);
 
             var CustomRayPerceptionInput = new CustomRayPerceptionInput();
             CustomRayPerceptionInput.RayLength = RayLength;
             CustomRayPerceptionInput.DetectableTags = DetectableTags;
             CustomRayPerceptionInput.Angles = rayAngles;
+            CustomRayPerceptionInput.DepthRays = depthRays;
             CustomRayPerceptionInput.StartOffset = GetStartVerticalOffset();
             CustomRayPerceptionInput.EndOffset = GetEndVerticalOffset();
             CustomRayPerceptionInput.CastRadius = SphereCastRadius;

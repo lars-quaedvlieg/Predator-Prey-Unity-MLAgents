@@ -42,6 +42,11 @@ namespace Unity.MLAgents.Sensors
         public IReadOnlyList<float> Angles;
 
         /// <summary>
+        /// List of bools for which rays have depth information.
+        /// </summary>
+        public IReadOnlyList<bool> DepthRays;
+
+        /// <summary>
         /// Starting height offset of ray from center of agent
         /// </summary>
         public float StartOffset;
@@ -411,6 +416,9 @@ namespace Unity.MLAgents.Sensors
             var unscaledRayLength = input.RayLength;
             var unscaledCastRadius = input.CastRadius;
 
+            // bool on whether or not this ray should have depth info
+            var depthRay = input.DepthRays[rayIndex];
+
             var extents = input.RayExtents(rayIndex);
             var startPositionWorld = extents.StartPositionWorld;
             var endPositionWorld = extents.EndPositionWorld;
@@ -467,6 +475,8 @@ namespace Unity.MLAgents.Sensors
 
                 castHit = rayHit;
                 hitFraction = castHit ? rayHit.fraction : 1.0f;
+                // if its not a depth ray, set depth (hitfraction) to -1
+                hitFraction = depthRay ? hitFraction : -1.0f;
                 hitObject = castHit ? rayHit.collider.gameObject : null;
 #endif
             }
