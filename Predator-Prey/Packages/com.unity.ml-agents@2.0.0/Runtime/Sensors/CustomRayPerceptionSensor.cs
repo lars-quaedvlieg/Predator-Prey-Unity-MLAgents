@@ -456,6 +456,8 @@ namespace Unity.MLAgents.Sensors
                 // If scaledRayLength is 0, we still could have a hit with sphere casts (maybe?).
                 // To avoid 0/0, set the fraction to 0.
                 hitFraction = castHit ? (scaledRayLength > 0 ? rayHit.distance / scaledRayLength : 0.0f) : 1.0f;
+                // if its not a depth ray, set depth (hitfraction) to -1
+                hitFraction = depthRay ? hitFraction : -1.0f;
                 hitObject = castHit ? rayHit.collider.gameObject : null;
 #endif
             }
