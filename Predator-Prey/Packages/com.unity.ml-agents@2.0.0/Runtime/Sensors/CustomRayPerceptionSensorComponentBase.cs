@@ -358,7 +358,7 @@ namespace Unity.MLAgents.Sensors
             rayDirection *= Math.Abs(rayOutput.HitFraction);
 
             // hit fraction ^2 will shift "far" hits closer to the hit color
-            var lerpT = rayOutput.HitFraction * rayOutput.HitFraction;
+            var lerpT = rayOutput.HasHit ? 0 : 1;//rayOutput.HitFraction * rayOutput.HitFraction;
             var color = Color.Lerp(rayHitColor, rayMissColor, lerpT);
             color = rayOutput.HitFraction < 0 ? color : Color.Lerp(color, depthRayColor, 0.5f);
             color.a *= alpha;
