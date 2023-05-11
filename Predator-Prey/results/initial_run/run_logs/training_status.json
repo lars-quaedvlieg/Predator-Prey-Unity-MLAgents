@@ -1,0 +1,53 @@
+{
+    "PredatorBehaviour": {
+        "elo": 1329.1973900806224,
+        "checkpoints": [
+            {
+                "steps": 300118,
+                "file_path": "results\\initial_run\\PredatorBehaviour\\PredatorBehaviour-300118.onnx",
+                "reward": 0.0,
+                "creation_time": 1683832952.711538,
+                "auxillary_file_paths": [
+                    "results\\initial_run\\PredatorBehaviour\\PredatorBehaviour-300118.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 300118,
+            "file_path": "results\\initial_run\\PredatorBehaviour.onnx",
+            "reward": 0.0,
+            "creation_time": 1683832952.711538,
+            "auxillary_file_paths": [
+                "results\\initial_run\\PredatorBehaviour\\PredatorBehaviour-300118.pt"
+            ]
+        }
+    },
+    "PreyBehaviour": {
+        "elo": 1223.3992392791017,
+        "checkpoints": [
+            {
+                "steps": 257151,
+                "file_path": "results\\initial_run\\PreyBehaviour\\PreyBehaviour-257151.onnx",
+                "reward": 0.0,
+                "creation_time": 1683832952.8895516,
+                "auxillary_file_paths": [
+                    "results\\initial_run\\PreyBehaviour\\PreyBehaviour-257151.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 257151,
+            "file_path": "results\\initial_run\\PreyBehaviour.onnx",
+            "reward": 0.0,
+            "creation_time": 1683832952.8895516,
+            "auxillary_file_paths": [
+                "results\\initial_run\\PreyBehaviour\\PreyBehaviour-257151.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.13.1+cpu"
+    }
+}
