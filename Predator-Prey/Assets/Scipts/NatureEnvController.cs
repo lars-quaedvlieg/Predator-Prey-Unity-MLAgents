@@ -72,7 +72,11 @@ public class NatureEnvController : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
+    {   
+        float predatorReward = -1f/maxEnvironmentSteps;
+        float preyReward = -1f*predatorReward;
+        preyGroup.AddGroupReward(preyReward);
+        predatorGroup.AddGroupReward(predatorReward);
         resetTimer += 1;
         if (resetTimer >= maxEnvironmentSteps && maxEnvironmentSteps > 0) {
             predatorGroup.GroupEpisodeInterrupted();
@@ -85,8 +89,8 @@ public class NatureEnvController : MonoBehaviour
         // Note: For now, the agent cannot die if it collides with the wall (I don't see an issue with this)
 
         Agent preyAgent = prey.gameObject.GetComponent<Agent>();
-        float predatorReward = 1f / numInitPrey - (float)resetTimer / maxEnvironmentSteps;
-        float preyReward = -1 * predatorReward;
+        float predatorReward = 1f / numInitPrey;
+        float preyReward = -1f*predatorReward;
 
         preyGroup.AddGroupReward(preyReward);
         predatorGroup.AddGroupReward(predatorReward);
