@@ -41,9 +41,9 @@ behaviors:
     summary_freq: 10000
     threaded: false
     self_play:
-      save_steps: 50000
-      team_change: 200000
-      swap_steps: 2000
+      save_steps: 10000
+      team_change: 100000
+      swap_steps: 10000
       window: 15
       play_against_latest_model_ratio: 0.8
       initial_elo: 1200.0
@@ -89,9 +89,9 @@ behaviors:
     summary_freq: 10000
     threaded: false
     self_play:
-      save_steps: 50000
-      team_change: 200000
-      swap_steps: 2000
+      save_steps: 15000
+      team_change: 100000
+      swap_steps: 10000
       window: 15
       play_against_latest_model_ratio: 0.8
       initial_elo: 1200.0
