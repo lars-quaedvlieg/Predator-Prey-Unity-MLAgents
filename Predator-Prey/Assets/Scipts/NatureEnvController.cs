@@ -32,6 +32,8 @@ public class NatureEnvController : MonoBehaviour
     public float rotMin = 0f;
     public float rotMax = 360f;
 
+    public bool isSingleAgent = false;
+
     // Temporary container for killed preys
     private List<Agent> removedAgents = new List<Agent>();
 
@@ -71,14 +73,21 @@ public class NatureEnvController : MonoBehaviour
 
     }
 
-    private float debug = 0;
-
     void FixedUpdate()
     {   
-        preyGroup.AddGroupReward(1f / (float)maxEnvironmentSteps);
-        debug += 1f / (float)maxEnvironmentSteps;
-        predatorGroup.AddGroupReward(-1 / (float)maxEnvironmentSteps);
-        
+        if (!isSingleAgent) {
+            preyGroup.AddGroupReward(1f / maxEnvironmentSteps);
+            predatorGroup.AddGroupReward(-1f / maxEnvironmentSteps);
+        } else {
+            foreach (var item in agentsList) {
+                if (item.agent.CompareTag("Predator")) {
+                    item.agent.AddReward(-1f / maxEnvironmentSteps);
+                } else if (item.agent.CompareTag("Prey")) {
+                    item.agent.AddReward(1f / maxEnvironmentSteps);
+                }
+            }
+        }
+ 
         resetTimer += 1;
         if (resetTimer >= maxEnvironmentSteps && maxEnvironmentSteps > 0) {
             predatorGroup.GroupEpisodeInterrupted();
@@ -87,16 +96,19 @@ public class NatureEnvController : MonoBehaviour
         }
     }
 
-    public void PredatorPreyCollision(Collider prey) {
+    public void PredatorPreyCollision(Agent caughtPrey, Agent catcherPredator) {
         // Note: For now, the agent cannot die if it collides with the wall (I don't see an issue with this)
 
-        Agent preyAgent = prey.gameObject.GetComponent<Agent>();
+        if (!isSingleAgent) {
+            preyGroup.AddGroupReward(-1f / numInitPrey);
+            predatorGroup.AddGroupReward(1f / numInitPrey);
+        } else {
+            caughtPrey.AddReward(-1);
+            catcherPredator.AddReward(1f);
+        }
 
-        preyGroup.AddGroupReward(-1f / numInitPrey);
-        debug += -1f / numInitPrey;
-        predatorGroup.AddGroupReward(1f / numInitPrey);
 
-        KillAgent(preyAgent);
+        KillAgent(caughtPrey);
 
         if (numDeadPrey == numInitPrey) {
             preyGroup.EndGroupEpisode();
@@ -122,8 +134,7 @@ public class NatureEnvController : MonoBehaviour
     }
 
     private void ResetScene() {
-        Debug.Log("EnvController: " + debug);
-        debug = 0;
+        //Debug.Log("EnvController: " + debug);
         resetTimer = 0;
 
         //Reset agents position and rotation

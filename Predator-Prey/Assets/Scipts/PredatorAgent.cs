@@ -39,7 +39,8 @@ public class PredatorAgent : Agent
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Prey")) {
-            envController.PredatorPreyCollision(other);
+            Agent preyAgent = other.gameObject.GetComponent<Agent>();
+            envController.PredatorPreyCollision(preyAgent, this);
         }
     }
 
