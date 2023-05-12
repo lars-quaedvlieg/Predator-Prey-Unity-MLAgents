@@ -129,7 +129,7 @@ public class NatureEnvController : MonoBehaviour
         }
         */
 
-        //agent.gameObject.SetActive(false);
+        agent.gameObject.SetActive(false);
         numDeadPrey += 1;
     }
 
