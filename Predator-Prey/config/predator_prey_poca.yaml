@@ -89,7 +89,7 @@ behaviors:
     summary_freq: 10000
     threaded: false
     self_play:
-      save_steps: 15000
+      save_steps: 10000
       team_change: 100000
       swap_steps: 10000
       window: 15

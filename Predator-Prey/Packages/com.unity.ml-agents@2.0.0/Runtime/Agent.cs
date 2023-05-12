@@ -769,6 +769,7 @@ namespace Unity.MLAgents
         /// <seealso cref="EpisodeInterrupted"/>
         public void EndEpisode()
         {
+            // Debug.Log("Episode ENDED, Agent type " + this.gameObject.tag + ":" + m_GroupReward);
             EndEpisodeAndReset(DoneReason.DoneCalled);
         }
 
@@ -785,6 +786,7 @@ namespace Unity.MLAgents
         /// <seealso cref="EndEpisode"/>
         public void EpisodeInterrupted()
         {
+            // Debug.Log("Episode INTER, Agent type " + this.gameObject.tag + ":" + m_GroupReward);
             EndEpisodeAndReset(DoneReason.MaxStepReached);
         }
 
