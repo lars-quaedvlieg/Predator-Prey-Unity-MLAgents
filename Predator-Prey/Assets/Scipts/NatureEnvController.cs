@@ -87,7 +87,13 @@ public class NatureEnvController : MonoBehaviour
                 }
             }
         }
- 
+
+        foreach (var item in agentsList) {
+            if (item.agent.transform.position.y < -10) {
+                item.agent.transform.position = item.startingPos;
+            }
+        }
+
         resetTimer += 1;
         if (resetTimer >= maxEnvironmentSteps && maxEnvironmentSteps > 0) {
             predatorGroup.GroupEpisodeInterrupted();
