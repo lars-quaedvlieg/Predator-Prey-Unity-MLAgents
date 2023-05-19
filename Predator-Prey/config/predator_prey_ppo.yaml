@@ -25,14 +25,6 @@ behaviors:
       extrinsic:
         gamma: 0.98
         strength: 1.0
-        network_settings:
-          normalize: false
-          hidden_units: 128
-          num_layers: 2
-          vis_encode_type: simple
-          memory: null
-          goal_conditioning_type: hyper
-          deterministic: false
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
@@ -73,14 +65,6 @@ behaviors:
       extrinsic:
         gamma: 0.98
         strength: 1.0
-        network_settings:
-          normalize: false
-          hidden_units: 128
-          num_layers: 2
-          vis_encode_type: simple
-          memory: null
-          goal_conditioning_type: hyper
-          deterministic: false
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000

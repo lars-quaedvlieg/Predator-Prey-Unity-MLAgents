@@ -17,6 +17,8 @@ public class PredatorAgent : Agent
 
     private NatureEnvController envController;
 
+    public bool usePosition = true;
+
     public void Start() {
         _animator = GetComponent<Animator>();
         ChangeAnimationState(RUN_FORWARD);
@@ -29,6 +31,13 @@ public class PredatorAgent : Agent
 
         transform.position += transform.forward * speedForward * Time.deltaTime;
         transform.Rotate(0f, rotateY, 0f);
+    }
+    public override void CollectObservations(VectorSensor sensor) {
+        if (usePosition) {
+            sensor.AddObservation(transform.localPosition.x);
+            sensor.AddObservation(transform.localPosition.z);
+            sensor.AddObservation(transform.rotation.y);
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut) {

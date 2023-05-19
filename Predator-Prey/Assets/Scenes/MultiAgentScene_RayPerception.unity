@@ -533,8 +533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -542,7 +542,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -580,6 +580,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &47142557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -772,8 +773,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -781,7 +782,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -819,6 +820,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &54033576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3093,8 +3095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -3102,7 +3104,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -3140,6 +3142,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &276704881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4609,8 +4612,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -4618,7 +4621,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -4656,6 +4659,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &452248449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4797,8 +4801,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -4806,7 +4810,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -4844,6 +4848,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &493641881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6216,8 +6221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   predatorMoveSpeed: 6
   predatorRotateSpeed: 2
-  preyMoveSpeed: 4
-  preyRotateSpeed: 6
+  preyMoveSpeed: 5.5
+  preyRotateSpeed: 8
   placeRandomly: 1
   rnd_x_width: 0
   rnd_z_width: 0
@@ -6720,8 +6725,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   predatorMoveSpeed: 6
   predatorRotateSpeed: 2
-  preyMoveSpeed: 4
-  preyRotateSpeed: 6
+  preyMoveSpeed: 5.5
+  preyRotateSpeed: 8
   placeRandomly: 1
   rnd_x_width: 0
   rnd_z_width: 0
@@ -6964,6 +6969,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!114 &651935458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6991,8 +6997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -7000,7 +7006,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -7400,8 +7406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -7409,7 +7415,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -7447,6 +7453,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &673987816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7653,8 +7660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -7662,7 +7669,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -7700,6 +7707,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &686129965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8108,8 +8116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -8117,7 +8125,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -8155,6 +8163,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &717616381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9068,8 +9077,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -9077,7 +9086,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -9115,6 +9124,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &827290899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9472,8 +9482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -9481,7 +9491,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -9519,6 +9529,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &889706246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9984,8 +9995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -9993,7 +10004,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -10031,6 +10042,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &921502721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10686,8 +10698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -10695,7 +10707,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -10733,6 +10745,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &979352379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11066,8 +11079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -11075,7 +11088,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -11113,6 +11126,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &1055732024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11723,8 +11737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -11732,7 +11746,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -11770,6 +11784,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &1087435267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12624,8 +12639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -12633,7 +12648,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -12671,6 +12686,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &1139002939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12932,8 +12948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   predatorMoveSpeed: 6
   predatorRotateSpeed: 2
-  preyMoveSpeed: 4
-  preyRotateSpeed: 6
+  preyMoveSpeed: 5.5
+  preyRotateSpeed: 8
   placeRandomly: 1
   rnd_x_width: 0
   rnd_z_width: 0
@@ -13921,6 +13937,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!114 &1277756412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13934,8 +13951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -13943,7 +13960,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -14211,8 +14228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -14220,7 +14237,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -14258,6 +14275,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &1281061707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15215,6 +15233,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!114 &1386610179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15228,8 +15247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -15237,7 +15256,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -15801,6 +15820,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!114 &1437616177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15828,8 +15848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -15837,7 +15857,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -16517,8 +16537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -16526,7 +16546,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -16564,6 +16584,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &1581483176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17016,8 +17037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -17025,7 +17046,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -17063,6 +17084,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &1590952771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19965,6 +19987,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!114 &1926232604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19978,8 +20001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -19987,7 +20010,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -21629,7 +21652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   predatorMoveSpeed: 6
   predatorRotateSpeed: 2
-  preyMoveSpeed: 6
+  preyMoveSpeed: 5.5
   preyRotateSpeed: 8
   placeRandomly: 1
   rnd_x_width: 5
@@ -22001,8 +22024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 3
+    NumStackedVectorObservations: 50
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -22010,7 +22033,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -22048,6 +22071,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
+  usePosition: 1
 --- !u!65 &2146963105
 BoxCollider:
   m_ObjectHideFlags: 0
