@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44626832, g: 0.49089992, b: 0.54682904, a: 1}
+  m_IndirectSpecularColor: {r: 0.44626868, g: 0.49090046, b: 0.54682976, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -542,7 +542,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -790,7 +790,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -3111,7 +3111,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -4709,7 +4709,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -4979,7 +4979,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -7173,7 +7173,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -7664,7 +7664,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -7917,7 +7917,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -8372,7 +8372,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -9414,7 +9414,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -9818,7 +9818,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -10412,7 +10412,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -11017,7 +11017,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -11561,7 +11561,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -12224,7 +12224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.36
+      value: -3.3600006
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12300,7 +12300,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -13283,7 +13283,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -14496,7 +14496,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -14773,7 +14773,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -15872,7 +15872,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -16472,7 +16472,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -17161,7 +17161,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
@@ -17660,7 +17660,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -20786,7 +20786,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b25d74d925f40264fb1db1d5bf47cc86, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 34f0ab73d7ba2d04c99510997c402611, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PreyBehaviour
@@ -22712,7 +22712,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 17db172dc0c599541a771fe522960cd0, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1e66324b798f02e43bdff0b6086ce5c1, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: PredatorBehaviour
