@@ -25,17 +25,25 @@ behaviors:
       extrinsic:
         gamma: 0.98
         strength: 1.0
+        network_settings:
+          normalize: false
+          hidden_units: 128
+          num_layers: 2
+          vis_encode_type: simple
+          memory: null
+          goal_conditioning_type: hyper
+          deterministic: false
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 800000
+    max_steps: 16000000
     time_horizon: 2048
     summary_freq: 10000
     threaded: false
     self_play:
       save_steps: 10000
-      team_change: 100000
-      swap_steps: 10000
+      team_change: 300000
+      swap_steps: 20000
       window: 15
       play_against_latest_model_ratio: 0.8
       initial_elo: 1200.0
@@ -65,17 +73,25 @@ behaviors:
       extrinsic:
         gamma: 0.98
         strength: 1.0
+        network_settings:
+          normalize: false
+          hidden_units: 128
+          num_layers: 2
+          vis_encode_type: simple
+          memory: null
+          goal_conditioning_type: hyper
+          deterministic: false
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 800000
+    max_steps: 16000000
     time_horizon: 2048
     summary_freq: 10000
     threaded: false
     self_play:
       save_steps: 10000
-      team_change: 100000
-      swap_steps: 10000
+      team_change: 300000
+      swap_steps: 20000
       window: 15
       play_against_latest_model_ratio: 0.8
       initial_elo: 1200.0
