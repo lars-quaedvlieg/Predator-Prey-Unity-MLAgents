@@ -14,7 +14,7 @@ public class PreyAgent : Agent
 
     private NatureEnvController envController;
 
-    public bool usePosition = true;
+    // public bool usePosition = true;
 
     public void Start() {
         _animator = gameObject.GetComponent<Animator>();
@@ -22,13 +22,13 @@ public class PreyAgent : Agent
         envController = GetComponentInParent<NatureEnvController>();
     }
 
-    public override void CollectObservations(VectorSensor sensor) {
-        if (usePosition) {
-            sensor.AddObservation(transform.localPosition.x);
-            sensor.AddObservation(transform.localPosition.z);
-            sensor.AddObservation(transform.rotation.y);
-        }
-    }
+    // public override void CollectObservations(VectorSensor sensor) {
+    //     if (usePosition) {
+    //         sensor.AddObservation(transform.localPosition.x);
+    //         sensor.AddObservation(transform.localPosition.z);
+    //         sensor.AddObservation(transform.rotation.y);
+    //     }
+    // }
 
     public override void OnActionReceived(ActionBuffers actions) {
         float speedForward = envController.preyMoveSpeed * Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
