@@ -11,6 +11,7 @@ public class PreyAgent : Agent
     private Animator _animator;
     private string _currentState;
     private const string RUN = "Run";
+    internal int survivedSteps = 0;
 
     private NatureEnvController envController;
 
