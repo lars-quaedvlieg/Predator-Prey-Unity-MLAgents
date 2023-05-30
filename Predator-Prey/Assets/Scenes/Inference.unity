@@ -768,15 +768,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalRotation.w
@@ -852,9 +852,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 9bdb7f1012500924a8da0bf6d5c82aa6, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 2
   m_BehaviorName: PredatorBehaviour
   TeamId: 0
   m_UseChildSensors: 1
@@ -9494,7 +9494,7 @@ GameObject:
   - component: {fileID: 595642605}
   - component: {fileID: 595642604}
   m_Layer: 0
-  m_Name: Env2
+  m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9527,23 +9527,7 @@ MonoBehaviour:
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
   - agent: {fileID: 1386610178}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
@@ -10472,7 +10456,7 @@ GameObject:
   - component: {fileID: 641463584}
   - component: {fileID: 641463583}
   m_Layer: 0
-  m_Name: Env4
+  m_Name: PreyDom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10505,23 +10489,7 @@ MonoBehaviour:
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
   - agent: {fileID: 1926232603}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
@@ -18860,9 +18828,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: f914e1b50366b864fa0d41f9a580c0fa, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 2
   m_BehaviorName: PreyBehaviour
   TeamId: 1
   m_UseChildSensors: 1
@@ -20603,23 +20571,7 @@ MonoBehaviour:
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
   - agent: {fileID: 1070767626}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
@@ -21546,7 +21498,7 @@ GameObject:
   - component: {fileID: 1188251356}
   - component: {fileID: 1188251355}
   m_Layer: 0
-  m_Name: Env3
+  m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21579,23 +21531,7 @@ MonoBehaviour:
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
   - agent: {fileID: 1277756411}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
@@ -22775,7 +22711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22783,7 +22719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.88
+      value: 9.96
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22888,9 +22824,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: dfe831b5eb6ce0f429738c85a7f590b4, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 2
   m_BehaviorName: PreyBehaviour
   TeamId: 1
   m_UseChildSensors: 1
@@ -26027,9 +25963,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: e58da5f184e1dbe4d9eb592c22748b9c, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 2
   m_BehaviorName: PredatorBehaviour
   TeamId: 0
   m_UseChildSensors: 1
@@ -27008,7 +26944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.56
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27016,7 +26952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.53
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27135,9 +27071,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: f914e1b50366b864fa0d41f9a580c0fa, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 2
   m_BehaviorName: PreyBehaviour
   TeamId: 1
   m_UseChildSensors: 1
@@ -27209,7 +27145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.82
+      value: -18.67
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27217,7 +27153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.84
+      value: -5.08
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27323,9 +27259,9 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: e58da5f184e1dbe4d9eb592c22748b9c, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 2
   m_BehaviorName: PredatorBehaviour
   TeamId: 0
   m_UseChildSensors: 1
@@ -28571,23 +28507,7 @@ MonoBehaviour:
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
   - agent: {fileID: 1524489339}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
@@ -38379,23 +38299,7 @@ MonoBehaviour:
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
   - agent: {fileID: 651935457}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
-    startingPos: {x: 0, y: 0, z: 0}
-    startingRot: {x: 0, y: 0, z: 0, w: 0}
-    rb: {fileID: 0}
-  - agent: {fileID: 0}
     startingPos: {x: 0, y: 0, z: 0}
     startingRot: {x: 0, y: 0, z: 0, w: 0}
     rb: {fileID: 0}
