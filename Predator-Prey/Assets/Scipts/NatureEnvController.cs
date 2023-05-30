@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
+using System.IO;
 
 public class NatureEnvController : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class NatureEnvController : MonoBehaviour
     public float rotMax = 360f;
 
     public bool isSingleAgent = false;
+
+    public bool performInference = false;
+    // directory for inference logs
+    public string inferenceLogDir = "inference_logs";
+    private string inferenceLogPath;
 
     // Temporary container for killed preys
     private List<Agent> removedAgents = new List<Agent>();
@@ -68,13 +74,25 @@ public class NatureEnvController : MonoBehaviour
             }
         }
 
+        // if performing inference, create the log file according to the env name
+        if (performInference) {
+          // create the directory if its missing. will do it recursively
+          // and return without error if the directory already exists
+          Directory.CreateDirectory(inferenceLogDir);
+          inferenceLogPath = Path.Combine(inferenceLogDir, gameObject.name + ".txt");
+          if (!File.Exists(inferenceLogPath)){
+              // Create a file to write to.
+              File.CreateText(inferenceLogPath);
+          }
+        }
+
         // Initialize the scene
         ResetScene();
 
     }
 
     void FixedUpdate()
-    {   
+    {
         if (!isSingleAgent) {
             preyGroup.AddGroupReward(1f / maxEnvironmentSteps);
             predatorGroup.AddGroupReward(-1f / maxEnvironmentSteps);
@@ -84,6 +102,13 @@ public class NatureEnvController : MonoBehaviour
                     item.agent.AddReward(-1f / maxEnvironmentSteps);
                 } else if (item.agent.CompareTag("Prey")) {
                     item.agent.AddReward(1f / maxEnvironmentSteps);
+                    // if we're performing inference, prey should keep track
+                    // of how many steps it's survived
+                    if (performInference) {
+                      // need to cast to PreyAgent type to access survivedSteps attribute
+                      var preyAgent = (PreyAgent)item.agent;
+                      preyAgent.survivedSteps += 1;
+                    }
                 }
             }
         }
@@ -111,6 +136,16 @@ public class NatureEnvController : MonoBehaviour
         } else {
             caughtPrey.AddReward(-1);
             catcherPredator.AddReward(1f);
+        }
+
+        // if performing inference, append entry into log file for how long prey survived
+        if (performInference) {
+          using (StreamWriter sw = File.AppendText(inferenceLogPath)) {
+              var preyAgent = (PreyAgent)caughtPrey;
+              sw.WriteLine(preyAgent.survivedSteps);
+              // reset counter
+              preyAgent.survivedSteps = 0;
+          }
         }
 
 
