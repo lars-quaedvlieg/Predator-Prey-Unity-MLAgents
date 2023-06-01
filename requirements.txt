@@ -10,3 +10,9 @@ tensorboard==2.11.2
 torch==1.13.1
 torchaudio==0.13.1
 torchvision==0.14.1
+jupyter
+plotly==5.14.1
+pandas
+seaborn
+matplotlib
+numpy
