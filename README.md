@@ -63,14 +63,14 @@ agents in the following way:
 
 1) Navigate to the "Predator-Prey" folder in your command line.
 2) Activate your Python environment
-3) run ```sh mlagents-learn CONFIG_PATH --env=BUILT_SCENE_PATH --run-id=ANY_RUN_IDENTIFIER --no-graphics``` (you can add "--resume" if you wish to continue training from a previous checkpoint.
+3) run ```mlagents-learn CONFIG_PATH --env=BUILT_SCENE_PATH --run-id=ANY_RUN_IDENTIFIER --no-graphics``` (you can add "--resume" if you wish to continue training from a previous checkpoint.
 4) Enjoy :)
 
 In order to track your training progress, you can run tensorboard in the same directory in the following way:
 
 1) Navigate to the "Predator-Prey" folder in your command line.
 2) Activate your Python environment
-3) run ```sh tensorboard --logdir results``` and open the webpage
+3) run ```tensorboard --logdir results``` and open the webpage
 4) Enjoy even more :)
 
 For inference, you can use the "inference" scene in Unity, which will write logs to the "Predator-Prey/inference_logs" folder. This folder also contains a file called
