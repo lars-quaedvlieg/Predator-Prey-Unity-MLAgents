@@ -4,7 +4,7 @@ Course project for CS-503 at EPFL. This research project investigates how differ
 simplified environments and training agents with reinforcement learning and self-play, we identify trends that emerge in the strategies and effectiveness
 of trained predator and prey agents which use varying vision fields. 
 
-![Project Display Image](https://imgtr.ee/i/S2FLI)
+![Project Display Image](https://imgtr.ee/images/2023/06/01/S2FLI.png)
 
 **Author:** 
 - [Lars C.P.M. Quaedvlieg](https://lars-quaedvlieg.github.io/)
@@ -54,7 +54,7 @@ and how to work with the Unity editor.
 
 Since the project is mostly developed in Unity, we insert the following screenshot of the project structure:
 
-![Project Structure](https://imgtr.ee/i/SwQXB)
+![Project Structure](https://imgtr.ee/images/2023/06/01/SwQXB.png)
 
 In order to train an agent, you need to [build](https://docs.unity3d.com/Manual/BuildSettings.html) a scene and then train the agents in the scene with a set
 configuration. The configurations for training with self-play can be found in the "Predator-Prey/config" subfolder. For more information about the specific
