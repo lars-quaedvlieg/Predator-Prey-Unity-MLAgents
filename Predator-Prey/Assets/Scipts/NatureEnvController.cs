@@ -121,6 +121,23 @@ public class NatureEnvController : MonoBehaviour
 
         resetTimer += 1;
         if (resetTimer >= maxEnvironmentSteps && maxEnvironmentSteps > 0) {
+
+            // if performing inference, reset survived steps to 0 when episode ends
+            // dont want to log it
+            if (performInference) {
+                foreach (var item in agentsList) {
+                    if (item.agent.CompareTag("Prey")) {   
+                        var preyAgent = (PreyAgent)item.agent;
+                        // #using (StreamWriter sw = File.AppendText(inferenceLogPath)) {
+                        // #    
+                        //    sw.WriteLine(preyAgent.survivedSteps);
+                        //}
+                        // reset counter
+                        preyAgent.survivedSteps = 0;
+                    }
+                }
+            }
+
             predatorGroup.GroupEpisodeInterrupted();
             preyGroup.GroupEpisodeInterrupted();
             ResetScene();
