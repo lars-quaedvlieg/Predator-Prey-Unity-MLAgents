@@ -1,0 +1,12 @@
+gym==0.26.2
+gymnasium==0.28.1
+h5py==3.8.0
+importlib-metadata==4.4.0
+mlagents==0.29.0
+mlagents-envs==0.29.0
+numpy==1.21.2
+PettingZoo==1.22.3
+tensorboard==2.11.2
+torch==1.13.1
+torchaudio==0.13.1
+torchvision==0.14.1
