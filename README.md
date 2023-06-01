@@ -40,7 +40,7 @@ sight and increasing their chances of survival.
 
 Locate the repository, create a Python environment, and run:
   ```sh
-  pip install -r requirements.yaml
+  pip install -r requirements.txt
   ```
 
 This will install all necessary packages to train your own agent on the environments using Unity's ML-Agents package.
