@@ -23,10 +23,10 @@ of trained predator and prey agents which use varying vision fields.
 
 The natural world is full of fascinating and complex interactions between predators and prey, with each constantly adapting and evolving to survive. 
 As researchers seek to better understand these dynamics, visual intelligence has emerged as a critical field of study, allowing us to gain 
-new insights into how animals perceive and react to their environments. In this research project, we will investigate the prey-predator setting by 
+new insights into how animals perceive and react to their environments. In this research project, we investigate the prey-predator setting by 
 training agents in a simplified environment with obstacles, using different vision fields to simulate different types of prey and predators observed 
-in the real world. Our goal is to examine emerging behaviours that can shed light on the strategies used by animals to survive 
-an attack or hunt a prey, as well as evaluate how different types of vision can help or hinder predator and prey agents. Furthermore, we will examine 
+in the real world. The goal of this project is to examine emerging behaviours that can shed light on the strategies used by animals to survive 
+an attack or hunt a prey, as well as evaluate how different types of vision can help or hinder predator and prey agents. Furthermore, we examine 
 the psychology of chasing and how prey agents might learn to use occlusions in their environment to their advantage, avoiding the predator's line of 
 sight and increasing their chances of survival.
 
