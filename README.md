@@ -32,7 +32,7 @@ sight and increasing their chances of survival.
 
 ## Getting Started
 
-1) install Unity (our project uses version 2021.3.24f1)
+1) Install Unity (our project uses version 2021.3.24f1)
 2) Set up Python (preferably version 3.7)
 3) Clone the project onto your local machine and open the project.
 
@@ -58,20 +58,21 @@ Since the project is mostly developed in Unity, we insert the following screensh
 
 In order to train an agent, you need to [build](https://docs.unity3d.com/Manual/BuildSettings.html) a scene and then train the agents in the scene with a set
 configuration. The configurations for training with self-play can be found in the "Predator-Prey/config" subfolder. For more information about the specific
-configurations, you can read about it [here](https://unity-technologies.github.io/ml-agents/Training-Configuration-File/). Afterwards, you can use Python to train the 
-agents in the following way:
+configurations, you can read about it [here](https://unity-technologies.github.io/ml-agents/Training-Configuration-File/). For an example of how to set up a project with ML-Agents from scratch,
+[this link](https://unity-technologies.github.io/ml-agents/Getting-Started/) provides a great tutorial. Afterwards, you can use Python to train the agents in the following way:
 
 1) Navigate to the "Predator-Prey" folder in your command line.
 2) Activate your Python environment
-3) run ```mlagents-learn CONFIG_PATH --env=BUILT_SCENE_PATH --run-id=ANY_RUN_IDENTIFIER --no-graphics``` (you can add "--resume" if you wish to continue training from a previous checkpoint.
+3) Run ```mlagents-learn CONFIG_PATH --env=BUILT_SCENE_PATH --run-id=ANY_RUN_IDENTIFIER --no-graphics``` (you can add "--resume" if you wish to continue training from a previous checkpoint.
 4) Enjoy :)
 
 In order to track your training progress, you can run tensorboard in the same directory in the following way:
 
 1) Navigate to the "Predator-Prey" folder in your command line.
 2) Activate your Python environment
-3) run ```tensorboard --logdir results``` and open the webpage
+3) Run ```tensorboard --logdir results``` and open the webpage
 4) Enjoy even more :)
 
 For inference, you can use the "inference" scene in Unity, which will write logs to the "Predator-Prey/inference_logs" folder. This folder also contains a file called
-"experiments.ipynb", which can be used to generate quantitative results from the generated logs.
+"experiments.ipynb", which can be used to generate quantitative results from the generated logs. Qualitative results can be obtained by running the scenes in the Unity editor after
+dragging the parameters of the models onto the respective agent objects.
