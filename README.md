@@ -6,7 +6,7 @@ of trained predator and prey agents which use varying vision fields.
 
 ![Project Display Image](https://imgtr.ee/images/2023/06/01/S2FLI.png)
 
-**Author:** 
+**Authors:** 
 - [Lars C.P.M. Quaedvlieg](https://lars-quaedvlieg.github.io/)
 - [Arvind S. Menon](https://arvind6599.github.io/)
 - [Somesh Mehra](https://vilab.epfl.ch/#prospective)
